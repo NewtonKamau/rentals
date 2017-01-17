@@ -1,0 +1,13 @@
+<li>
+  {{rental.owner}}'s {{rental.type}} in {{rental.city}}
+  {{#if isImageShowing }}
+  <!-- this shows the image effects using action -->
+    <p><img src={{rental.image}} alt={{rental.type}} ></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Show image</button>
+  {{/if}}
+  <!-- this is add a dlete button to our page -->
+  <button {{action 'delete' rental}}>Delete Rental</button>
+
+
+</li>

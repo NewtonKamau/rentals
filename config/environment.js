@@ -15,6 +15,14 @@ module.exports = function(environment) {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
       }
+      },
+      firebase: {
+        apiKey: "AIzaSyBxo_nmNzOjrFynoJ4QocYNEwpc5X-L_eY",
+        authDomain: "super-rentals-e04ef.firebaseapp.com",
+        databaseURL: "https://super-rentals-e04ef.firebaseio.com",
+        storageBucket: "super-rentals-e04ef.appspot.com",
+        messagingSenderId: "1040341852094"
+
     },
 
     APP: {
