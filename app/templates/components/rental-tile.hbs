@@ -6,6 +6,8 @@
   {{else}}
     <button {{action 'imageShow'}}>Show image</button>
   {{/if}}
+  <!--this is to add an update button  -->
+  {{update-rental rental=rental update="update"}}
   <!-- this is add a dlete button to our page -->
   <button {{action 'delete' rental}}>Delete Rental</button>
 

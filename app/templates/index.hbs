@@ -7,8 +7,24 @@ We hope you find exactly what you're looking for in a place to stay.
     {{rental-tile rental=rental destroyRental="destroyRental"}}
   {{/each}}
 </ul>
+<!--update button on our index  -->
+<ul>
+  {{#each model as |rental|}}
+    {{rental-tile rental=rental update="update" destroyRental="destroyRental"}}
+  {{/each}}
+</ul>
+
 <!--this will add an add button  -->
 {{new-rental saveRental2="saveRental3"}}
+<li>
+  {{rental.owner}}'s {{rental.type}} in {{rental.city}}
+  {{#if isImageShowing }}
+    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+  {{else}}
+    <button {{action 'imageShow'}}>Show image</button>
+  {{/if}}
+  <button {{action 'delete' rental}}>Delete Rental</button>
+</li>
 
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
